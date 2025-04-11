@@ -7,11 +7,14 @@ import {ModeToggle} from "@/modules/core/components/ModeToggle/ModeToggle";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {usePathname} from "next/navigation";
+import HeaderSecondary from "@/modules/core/components/HeaderSecondary/HeaderSecondary";
 
 
 const Header = () => {
 
+    // Consts, variables, states
     const pathname = usePathname()
+    const isArtistDetailPage = pathname.startsWith('/artists/') && pathname !== '/artists';
 
     const pathnameWithoutHeader = [
         '/login',
@@ -19,7 +22,13 @@ const Header = () => {
         '/recovery-password',
     ]
 
+
     if(pathnameWithoutHeader.includes(pathname)) return null
+
+    // Mostrar HeaderSecondary en páginas de detalle de artistas
+    if (isArtistDetailPage) {
+        return <HeaderSecondary />
+    }
 
     return (
         <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:bg-background/95 dark:supports-[backdrop-filter]:bg-background/60">

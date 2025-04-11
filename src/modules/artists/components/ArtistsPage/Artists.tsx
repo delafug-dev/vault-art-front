@@ -46,8 +46,8 @@ export default function Artists() {
 
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {filteredArtists.map((artist) => (
-                        <Link href={`/artist/${artist.id}`} key={artist.id} className="group">
-                            <div className="overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                        <Link href={`/artists/${artist.slug}`} key={artist.id} className="group">
+                            <div className="overflow-hidden rounded-lg border bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:bg-card-foreground">
                                 {/* Contenido del artista sin cambios */}
                                 <div className="flex items-center gap-4">
                                     <Image
@@ -58,13 +58,13 @@ export default function Artists() {
                                         className="rounded-full object-cover h-20 w-20"
                                     />
                                     <div>
-                                        <h3 className="text-xl font-bold group-hover:underline">{artist.name}</h3>
-                                        <p className="text-sm text-muted-foreground">{artist.lifespan}</p>
-                                        <p className="text-sm text-muted-foreground">{artist.nationality}</p>
+                                        <h3 className="text-xl font-bold group-hover:underline dark:text-secondary">{artist.name}</h3>
+                                        <p className="text-sm text-muted-foreground dark:text-secondary">{artist.lifespan}</p>
+                                        <p className="text-sm text-muted-foreground dark:text-secondary">{artist.nationality}</p>
                                     </div>
                                 </div>
-                                <p className="mt-4 line-clamp-3">{artist.bio}</p>
-                                <p className="mt-2 text-sm font-medium text-muted-foreground">Movimiento: {artist.movement}</p>
+                                <p className="mt-4 line-clamp-3 dark:text-muted-foreground">{artist.bio}</p>
+                                <p className="mt-2 text-sm font-medium text-muted-foreground dark:text-secondary">Movimiento: {artist.movement}</p>
                             </div>
                         </Link>
                     ))}
@@ -74,11 +74,11 @@ export default function Artists() {
     )
 }
 
-// Sample data
 const artists = [
     {
         id: 1,
         name: "Vincent van Gogh",
+        slug: "vincent-van-gogh",
         lifespan: "1853-1890",
         nationality: "Neerlandés",
         movement: "Postimpresionismo",
@@ -88,6 +88,7 @@ const artists = [
     {
         id: 2,
         name: "Leonardo da Vinci",
+        slug: "leonardo-da-vinci",
         lifespan: "1452-1519",
         nationality: "Italiano",
         movement: "Renacimiento",
@@ -97,6 +98,7 @@ const artists = [
     {
         id: 3,
         name: "Pablo Picasso",
+        slug: "pablo-picasso",
         lifespan: "1881-1973",
         nationality: "Español",
         movement: "Cubismo",
@@ -106,6 +108,7 @@ const artists = [
     {
         id: 4,
         name: "Frida Kahlo",
+        slug: "frida-kahlo",
         lifespan: "1907-1954",
         nationality: "Mexicana",
         movement: "Surrealismo",
@@ -115,6 +118,7 @@ const artists = [
     {
         id: 5,
         name: "Claude Monet",
+        slug: "claude-monet",
         lifespan: "1840-1926",
         nationality: "Francés",
         movement: "Impresionismo",
@@ -124,6 +128,7 @@ const artists = [
     {
         id: 6,
         name: "Salvador Dalí",
+        slug: "salvador-dali",
         lifespan: "1904-1989",
         nationality: "Español",
         movement: "Surrealismo",
@@ -133,6 +138,7 @@ const artists = [
     {
         id: 7,
         name: "Rembrandt",
+        slug: "rembrandt",
         lifespan: "1606-1669",
         nationality: "Neerlandés",
         movement: "Barroco",
@@ -142,6 +148,7 @@ const artists = [
     {
         id: 8,
         name: "Diego Velázquez",
+        slug: "diego-velazquez",
         lifespan: "1599-1660",
         nationality: "Español",
         movement: "Barroco",
@@ -151,6 +158,7 @@ const artists = [
     {
         id: 9,
         name: "Edvard Munch",
+        slug: "edvard-munch",
         lifespan: "1863-1944",
         nationality: "Noruego",
         movement: "Expresionismo",
