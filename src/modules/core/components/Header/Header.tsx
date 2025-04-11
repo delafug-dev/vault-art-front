@@ -48,7 +48,7 @@ const Header = () => {
                     <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
                         Exhibitions
                     </Link>
-                    <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+                    <Link href="/about" className="text-sm font-medium hover:underline underline-offset-4">
                         About
                     </Link>
                 </nav>
@@ -69,7 +69,7 @@ const Header = () => {
                     </Button>
                     <div className="hidden md:flex items-center gap-2">
 
-                        <Button variant="ghost" size="sm" className="cursor-pointer">
+                        <Button variant="ghostBordered" size="sm" className="cursor-pointer">
                             <Link href="/login" >
                                 Sign In
                             </Link>
@@ -106,7 +106,7 @@ const Header = () => {
                                 <Link href="#" className="text-lg font-medium">
                                     Artists
                                 </Link>
-                                <Link href="#" className="text-lg font-medium">
+                                <Link href="/about" className="text-lg font-medium">
                                     About
                                 </Link>
                                 <div className="h-px bg-border my-4" />

@@ -39,7 +39,7 @@ const Artist = ({params}: ArtistProps) => {
                             <div>
                                 <h1 className="text-3xl font-bold tracking-tight">{artist.name}</h1>
                                 <p className="text-xl text-muted-foreground">{artist.lifespan}</p>
-                                <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
+                                <div className="mt-4 grid md:grid-cols-2 gap-4 text-sm grid-cols-1">
                                     <div>
                                         <span className="font-medium">Nacionalidad:</span> {artist.nationality}
                                     </div>
