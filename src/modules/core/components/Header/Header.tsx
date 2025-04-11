@@ -1,5 +1,4 @@
 'use client'
-// En Header.tsx
 
 import {Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
 import Link from "next/link";
@@ -7,10 +6,20 @@ import {Search, Menu} from "lucide-react";
 import {ModeToggle} from "@/modules/core/components/ModeToggle/ModeToggle";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
+import {usePathname} from "next/navigation";
 
 
 const Header = () => {
 
+    const pathname = usePathname()
+
+    const pathnameWithoutHeader = [
+        '/login',
+        '/signup',
+        '/recovery-password',
+    ]
+
+    if(pathnameWithoutHeader.includes(pathname)) return null
 
     return (
         <header className="sticky top-0 z-10 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:bg-background/95 dark:supports-[backdrop-filter]:bg-background/60">
@@ -22,13 +31,13 @@ const Header = () => {
                 </div>
                 <nav className="hidden gap-6 md:flex">
                     <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-                        Exhibitions
-                    </Link>
-                    <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
                         Collections
                     </Link>
-                    <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+                    <Link href="/artists" className="text-sm font-medium hover:underline underline-offset-4">
                         Artists
+                    </Link>
+                    <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+                        Exhibitions
                     </Link>
                     <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
                         About
