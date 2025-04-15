@@ -3,24 +3,12 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
-import { Search, Menu, Filter } from "lucide-react"
+import { Filter } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
-
-interface Painting {
-  id: number;
-  title: string;
-  artist: string;
-  year: number;
-  medium: string;
-  style: string;
-  period: string;
-  image: string;
-}
 
 interface FilterState {
   styles: string[];
@@ -28,7 +16,6 @@ interface FilterState {
 }
 
 const Collections = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [activeFilters, setActiveFilters] = useState<FilterState>({
         styles: [],
         periods: [],
