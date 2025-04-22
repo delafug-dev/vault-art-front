@@ -57,7 +57,7 @@ const Artist = ({params}: ArtistProps) => {
                         </div>
 
                         <Tabs defaultValue="obras" className="mt-12">
-                            <TabsList className="grid w-full grid-cols-2 mb-8 bg-card-foreground">
+                            <TabsList className="grid w-full grid-cols-2 mb-8 bg-primary">
                                 <TabsTrigger value="obras" >Obras</TabsTrigger>
                                 <TabsTrigger value="cronologia">Cronología</TabsTrigger>
                             </TabsList>

@@ -39,7 +39,7 @@ const Header = () => {
                     </Link>
                 </div>
                 <nav className="hidden gap-6 md:flex">
-                    <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+                    <Link href="/collections" className="text-sm font-medium hover:underline underline-offset-4">
                         Collections
                     </Link>
                     <Link href="/artists" className="text-sm font-medium hover:underline underline-offset-4">
@@ -100,10 +100,10 @@ const Header = () => {
                                 <Link href="#" className="text-lg font-medium">
                                     Exhibitions
                                 </Link>
-                                <Link href="#" className="text-lg font-medium">
+                                <Link href="/collections" className="text-lg font-medium">
                                     Collections
                                 </Link>
-                                <Link href="#" className="text-lg font-medium">
+                                <Link href="/artists" className="text-lg font-medium">
                                     Artists
                                 </Link>
                                 <Link href="/about" className="text-lg font-medium">
